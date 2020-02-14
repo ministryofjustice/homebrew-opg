@@ -7,11 +7,11 @@ class EcsStabilizer < Formula
 
   if OS.mac?
     url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.1.1/opg-ecs-helper_0.1.1_Darwin_x86_64.tar.gz"
-    sha256 "b4cefa74ab9f5ac1ebad8fc38f2d1884c591df55956e4cd417c368e00b5b5ad7"
+    sha256 "dd500db0c69643a8bf0102bb05384f5f6268d1c2c9040b474c61225b3f0a3d97"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.1.1/opg-ecs-helper_0.1.1_Linux_x86_64.tar.gz"
-      sha256 "e45c8f517b7bc3bc143870786b3b8e42c2f5867218c14ecb52e6043bd89a2d3e"
+      sha256 "013dca929f9d0650683eab2a364f66c979aec3c3b45ad17a1d3ccbfb99c1d0ce"
     end
   end
 
