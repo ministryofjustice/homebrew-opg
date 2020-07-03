@@ -2,16 +2,16 @@
 class EcsRunner < Formula
   desc "ecs-runner allows you to run ECS tasks"
   homepage "https://github.com/ministryofjustice/opg-ecs-helper"
-  version "0.1.1"
+  version "0.2.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.1.1/opg-ecs-helper_0.1.1_Darwin_x86_64.tar.gz"
-    sha256 "dd500db0c69643a8bf0102bb05384f5f6268d1c2c9040b474c61225b3f0a3d97"
+    url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.2.0/opg-ecs-helper_Darwin_x86_64.tar.gz"
+    sha256 "5366f9cf7c34aa8ae0fd1d9c729ce30f1fbd83ab7546b68348d1a8c5e52123cc"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.1.1/opg-ecs-helper_0.1.1_Linux_x86_64.tar.gz"
-      sha256 "013dca929f9d0650683eab2a364f66c979aec3c3b45ad17a1d3ccbfb99c1d0ce"
+      url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.2.0/opg-ecs-helper_Linux_x86_64.tar.gz"
+      sha256 "1aca289b5bd848abf5356bf2ff21f6955417f0f225b15111eb48fd55d71af4fd"
     end
   end
 
