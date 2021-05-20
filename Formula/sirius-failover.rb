@@ -5,16 +5,16 @@
 class SiriusFailover < Formula
   desc "sirius-failover allows you to failover Sirius"
   homepage "https://github.com/ministryofjustice/opg-sirius-failover"
-  version "1.1.0-beta.1"
+  version "1.2.0-beta.1"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/ministryofjustice/opg-sirius-failover/releases/download/v1.1.0-beta.1/opg-sirius-failover_Darwin_x86_64.tar.gz"
-    sha256 "38292d374502a86785bbfdbd27c8973c4fcd3ad1724533cdd72df1ec7920dc17"
+    url "https://github.com/ministryofjustice/opg-sirius-failover/releases/download/v1.2.0-beta.1/opg-sirius-failover_Darwin_x86_64.tar.gz"
+    sha256 "6c9962ce7955303e72c3475ac32e2788ddf940e7f8d699cd4aa6c1f4ca54e736"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ministryofjustice/opg-sirius-failover/releases/download/v1.1.0-beta.1/opg-sirius-failover_Linux_x86_64.tar.gz"
-    sha256 "69dba19d9ea55547991c5cdf0c7c39c03cf2b8fd627d1ee4b1558819e973e056"
+    url "https://github.com/ministryofjustice/opg-sirius-failover/releases/download/v1.2.0-beta.1/opg-sirius-failover_Linux_x86_64.tar.gz"
+    sha256 "695789dd4ff11d82ce2a0d11528b4494363c69abeedeee29b654cd59a274d43e"
   end
 
   def install
