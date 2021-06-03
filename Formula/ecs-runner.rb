@@ -5,16 +5,21 @@
 class EcsRunner < Formula
   desc "ecs-runner allows you to run ECS tasks"
   homepage "https://github.com/ministryofjustice/opg-ecs-helper"
-  version "0.5.0-beta.2"
+  version "0.5.0-beta.3"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.5.0-beta.2/opg-ecs-helper_Darwin_x86_64.tar.gz"
-    sha256 "402097850a6d5ac8173ca3844fe752d5a0ec1efba9e2810b43b23c7f8f9c5221"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.5.0-beta.3/opg-ecs-helper_Darwin_x86_64.tar.gz"
+      sha256 "fb66dafadbd37e46bb1289776178d54b6a91fa35254c911d870dd946b0f21196"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.5.0-beta.2/opg-ecs-helper_Linux_x86_64.tar.gz"
-    sha256 "8147ad3764bb15d821d78d0825cbf668b851db0393a50eff5810a8f991aa8b5b"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.5.0-beta.3/opg-ecs-helper_Linux_x86_64.tar.gz"
+      sha256 "4b0e5d7d9e0e5522290c1604b13db8e5ef30d9e173f4a481289f7713a08f7f2d"
+    end
   end
 
   def install
