@@ -5,20 +5,20 @@
 class EcsStabilizer < Formula
   desc "ecs-stabilizer allows you to check to makre sure services are stable"
   homepage "https://github.com/ministryofjustice/opg-ecs-helper"
-  version "0.5.0-beta.3"
+  version "0.5.0-beta.4"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.5.0-beta.3/opg-ecs-helper_Darwin_x86_64.tar.gz"
-      sha256 "fb66dafadbd37e46bb1289776178d54b6a91fa35254c911d870dd946b0f21196"
+      url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.5.0-beta.4/opg-ecs-helper_Darwin_x86_64.tar.gz"
+      sha256 "e65c9363714a4a2b1016cdcf0c5d4a4219d05b3c1217df9b148dacd96e8fea30"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.5.0-beta.3/opg-ecs-helper_Linux_x86_64.tar.gz"
-      sha256 "4b0e5d7d9e0e5522290c1604b13db8e5ef30d9e173f4a481289f7713a08f7f2d"
+      url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.5.0-beta.4/opg-ecs-helper_Linux_x86_64.tar.gz"
+      sha256 "abe38fe2e2b9d36f681c7e48b3012d57525c19014ad34908b01da4d3387050e2"
     end
   end
 
