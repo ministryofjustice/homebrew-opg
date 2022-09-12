@@ -5,11 +5,11 @@
 class EcsStabilizer < Formula
   desc "ecs-stabilizer allows you to check to makre sure services are stable"
   homepage "https://github.com/ministryofjustice/opg-ecs-helper"
-  version "0.5.0-SP-1219.9"
+  version "0.4.1"
 
   on_macos do
-    url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.5.0-SP-1219.9/opg-ecs-helper_Darwin_x86_64.tar.gz"
-    sha256 "60bb71d5f0d7fda741967612c0792682b33a262a914bf4dd4e9753babf26ff9b"
+    url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.4.1/opg-ecs-helper_Darwin_x86_64.tar.gz"
+    sha256 "ded5c9f082f882fd8bf424d3c36499a2bce15ce662ca40027742931ec9cbc3f1"
 
     def install
       bin.install "ecs-stabilizer"
@@ -28,8 +28,8 @@ class EcsStabilizer < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.5.0-SP-1219.9/opg-ecs-helper_Linux_x86_64.tar.gz"
-      sha256 "dbb4536f845e8733d7d49aed072bb678331fbb88ff47368c6e9437450fe4b8af"
+      url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.4.1/opg-ecs-helper_Linux_x86_64.tar.gz"
+      sha256 "0e10657c22c092744fe56815a235b9fe0911a5dc96b227395ca559676a488d67"
 
       def install
         bin.install "ecs-stabilizer"
