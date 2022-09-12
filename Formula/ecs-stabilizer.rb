@@ -5,24 +5,35 @@
 class EcsStabilizer < Formula
   desc "ecs-stabilizer allows you to check to makre sure services are stable"
   homepage "https://github.com/ministryofjustice/opg-ecs-helper"
-  version "0.5.0-beta.4"
-  bottle :unneeded
+  version "0.5.0-SP-1219.9"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.5.0-beta.4/opg-ecs-helper_Darwin_x86_64.tar.gz"
-      sha256 "e65c9363714a4a2b1016cdcf0c5d4a4219d05b3c1217df9b148dacd96e8fea30"
+    url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.5.0-SP-1219.9/opg-ecs-helper_Darwin_x86_64.tar.gz"
+    sha256 "60bb71d5f0d7fda741967612c0792682b33a262a914bf4dd4e9753babf26ff9b"
+
+    def install
+      bin.install "ecs-stabilizer"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the EcsStabilizer
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.5.0-beta.4/opg-ecs-helper_Linux_x86_64.tar.gz"
-      sha256 "abe38fe2e2b9d36f681c7e48b3012d57525c19014ad34908b01da4d3387050e2"
-    end
-  end
+      url "https://github.com/ministryofjustice/opg-ecs-helper/releases/download/v0.5.0-SP-1219.9/opg-ecs-helper_Linux_x86_64.tar.gz"
+      sha256 "dbb4536f845e8733d7d49aed072bb678331fbb88ff47368c6e9437450fe4b8af"
 
-  def install
-    bin.install "ecs-stabilizer"
+      def install
+        bin.install "ecs-stabilizer"
+      end
+    end
   end
 end
